@@ -5,6 +5,7 @@ This Codex skill produces reproducible Chinese news brief DOCX reports for techn
 The workflow combines:
 
 - RSS/list/API discovery for broad candidate collection.
+- RSSHub route expansion for sources that do not expose stable public feeds.
 - AI-directed search for high-value reports, viewpoints, and original sources.
 - WeChat/public-account leads with trace-back rules.
 - Hard validation for date windows, required fields, source diversity, and final DOCX structure.

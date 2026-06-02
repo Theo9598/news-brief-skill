@@ -1,0 +1,207 @@
+{
+  "notes": "RSSHub routes used only for broad candidate discovery. Prefer original article/report URLs in the final brief. RSSHub public instances can be unstable; treat failures as non-blocking.",
+  "default_instance": "https://rsshub.app",
+  "fallback_instances": [
+    "https://rsshub.chn.moe"
+  ],
+  "routes": [
+    {
+      "name": "第一财经-最新",
+      "route": "/yicai/latest",
+      "sections": ["数字经济", "服务业/消费", "货币金融/投资", "外资外贸"],
+      "source_type": "rsshub_media",
+      "priority": "high",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/traditional-media#%E7%AC%AC%E4%B8%80%E8%B4%A2%E7%BB%8F"
+    },
+    {
+      "name": "第一财经-科技",
+      "route": "/yicai/news/kechuang",
+      "sections": ["科技创新", "数字经济"],
+      "source_type": "rsshub_media",
+      "priority": "high",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/traditional-media#%E7%AC%AC%E4%B8%80%E8%B4%A2%E7%BB%8F"
+    },
+    {
+      "name": "第一财经-金融",
+      "route": "/yicai/news/jinrong",
+      "sections": ["货币金融/投资", "外资外贸"],
+      "source_type": "rsshub_media",
+      "priority": "high",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/traditional-media#%E7%AC%AC%E4%B8%80%E8%B4%A2%E7%BB%8F"
+    },
+    {
+      "name": "第一财经-消费数知",
+      "route": "/yicai/news/xfsz",
+      "sections": ["数字经济", "服务业/消费"],
+      "source_type": "rsshub_media",
+      "priority": "medium",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/traditional-media#%E7%AC%AC%E4%B8%80%E8%B4%A2%E7%BB%8F"
+    },
+    {
+      "name": "财联社-深度头条",
+      "route": "/cls/depth/1000",
+      "sections": ["科技创新", "数字经济", "货币金融/投资", "外资外贸"],
+      "source_type": "rsshub_media",
+      "priority": "high",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/finance#%E8%B4%A2%E8%81%94%E7%A4%BE"
+    },
+    {
+      "name": "财联社-金融深度",
+      "route": "/cls/depth/1032",
+      "sections": ["货币金融/投资"],
+      "source_type": "rsshub_media",
+      "priority": "high",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/finance#%E8%B4%A2%E8%81%94%E7%A4%BE"
+    },
+    {
+      "name": "财联社-汽车深度",
+      "route": "/cls/depth/1119",
+      "sections": ["科技创新", "服务业/消费", "投资"],
+      "source_type": "rsshub_media",
+      "priority": "medium",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/finance#%E8%B4%A2%E8%81%94%E7%A4%BE"
+    },
+    {
+      "name": "财联社-科创深度",
+      "route": "/cls/depth/1111",
+      "sections": ["科技创新", "数字经济", "投资"],
+      "source_type": "rsshub_media",
+      "priority": "high",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/finance#%E8%B4%A2%E8%81%94%E7%A4%BE"
+    },
+    {
+      "name": "财新-一线新闻",
+      "route": "/caixin/k",
+      "sections": ["科技创新", "医疗卫生", "数字经济", "服务业/消费", "就业", "货币金融/投资", "外资外贸"],
+      "source_type": "rsshub_media_paywall_update",
+      "priority": "medium",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/traditional-media#%E8%B4%A2%E6%96%B0%E4%B8%80%E7%BA%BF"
+    },
+    {
+      "name": "财新-数据通",
+      "route": "/caixin/database",
+      "sections": ["数字经济", "服务业/消费", "货币金融/投资", "外资外贸"],
+      "source_type": "rsshub_media_paywall_update",
+      "priority": "medium",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/traditional-media#%E8%B4%A2%E6%96%B0%E6%95%B0%E6%8D%AE%E9%80%9A"
+    },
+    {
+      "name": "健康界-新闻",
+      "route": "/cn-healthcare/index",
+      "sections": ["医疗卫生"],
+      "source_type": "rsshub_industry_media",
+      "priority": "high",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/new-media"
+    },
+    {
+      "name": "国家金融与发展实验室-研究",
+      "route": "/nifd/research/3333d2af-91d6-429b-be83-28b92f31b6d7",
+      "sections": ["货币金融/投资", "就业", "外资外贸"],
+      "source_type": "rsshub_thinktank",
+      "priority": "high",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/finance#%E5%9B%BD%E5%AE%B6%E9%87%91%E8%9E%8D%E4%B8%8E%E5%8F%91%E5%B1%95%E5%AE%9E%E9%AA%8C%E5%AE%A4"
+    },
+    {
+      "name": "麦肯锡中国-全部洞见",
+      "route": "/mckinsey/cn/25",
+      "sections": ["科技创新", "医疗卫生", "数字经济", "服务业/消费", "就业", "货币金融/投资", "外资外贸"],
+      "source_type": "rsshub_consulting",
+      "priority": "medium",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/finance#%E9%BA%A6%E8%82%AF%E9%94%A1"
+    },
+    {
+      "name": "麦肯锡中国-数字化",
+      "route": "/mckinsey/cn/7",
+      "sections": ["科技创新", "数字经济"],
+      "source_type": "rsshub_consulting",
+      "priority": "medium",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/finance#%E9%BA%A6%E8%82%AF%E9%94%A1"
+    },
+    {
+      "name": "麦肯锡中国-医药",
+      "route": "/mckinsey/cn/5",
+      "sections": ["医疗卫生"],
+      "source_type": "rsshub_consulting",
+      "priority": "medium",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/finance#%E9%BA%A6%E8%82%AF%E9%94%A1"
+    },
+    {
+      "name": "DeepSeek-新闻",
+      "route": "/deepseek/news",
+      "sections": ["科技创新", "数字经济"],
+      "source_type": "rsshub_company",
+      "priority": "medium",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/programming#deepseek"
+    },
+    {
+      "name": "HuggingFace-博客",
+      "route": "/huggingface/blog",
+      "sections": ["科技创新", "数字经济"],
+      "source_type": "rsshub_ai_global",
+      "priority": "medium",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/programming#huggingface"
+    },
+    {
+      "name": "HuggingFace-每日论文",
+      "route": "/huggingface/daily-papers/date",
+      "sections": ["科技创新"],
+      "source_type": "rsshub_research",
+      "priority": "low",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/programming#huggingface"
+    },
+    {
+      "name": "ModelScope-社区",
+      "route": "/modelscope/community",
+      "sections": ["科技创新", "数字经济"],
+      "source_type": "rsshub_ai_china",
+      "priority": "medium",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/programming#modelscope-%E9%AD%94%E6%90%AD%E7%A4%BE%E5%8C%BA"
+    },
+    {
+      "name": "中国科技网-科技日报",
+      "route": "/stdaily/digitalpaper",
+      "sections": ["科技创新", "医疗卫生", "数字经济"],
+      "source_type": "rsshub_media_official_like",
+      "priority": "low",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/traditional-media#%E4%B8%AD%E5%9B%BD%E7%A7%91%E6%8A%80%E7%BD%91"
+    },
+    {
+      "name": "中国经济网-地方经济",
+      "route": "/ce/district/roll",
+      "sections": ["服务业/消费", "就业", "外资外贸"],
+      "source_type": "rsshub_media_official_like",
+      "priority": "low",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/traditional-media#%E4%B8%AD%E5%9B%BD%E7%BB%8F%E6%B5%8E%E7%BD%91"
+    },
+    {
+      "name": "中国新闻周刊-经济",
+      "route": "/inewsweek/finance",
+      "sections": ["数字经济", "服务业/消费", "货币金融/投资", "外资外贸"],
+      "source_type": "rsshub_media",
+      "priority": "medium",
+      "enabled": true,
+      "docs": "https://docs.rsshub.app/routes/traditional-media#%E4%B8%AD%E5%9B%BD%E6%96%B0%E9%97%BB%E5%91%A8%E5%88%8A"
+    }
+  ]
+}
