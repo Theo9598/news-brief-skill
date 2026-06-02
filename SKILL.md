@@ -22,6 +22,7 @@ Use this skill when the user asks to create, update, or systematize a Chinese ne
    - For RSS, use `scripts/collect_rss_candidates.py FEEDS.json --brief-date YYYY-MM-DD --window ... --out RAW.json`.
    - To expand RSS coverage with RSSHub, generate feed JSON first:
      `scripts/generate_rsshub_feeds.py references/rsshub_routes.json --out RSSHUB_FEEDS.json`.
+     For the normal daily run, prefer `--tier core_daily`; for thin sections, add `--tier sector_expansion --field 医疗卫生` or another relevant field; for narrow backfills, use `--tier topic_backfill --field technology_ai`.
      RSSHub routes are discovery aids only; final briefs should cite original article/report URLs where possible.
    - If project-local `.python-packages` contains `feedparser`, the script uses it for RSS/Atom parsing; otherwise it falls back to Python stdlib XML parsing.
    - Add `--extract-text --max-extract N` to fetch candidate pages and extract article text with `trafilatura` when installed.
@@ -31,6 +32,7 @@ Use this skill when the user asks to create, update, or systematize a Chinese ne
 3. **Use four discovery channels**
    - RSS/list/API channel: broad, reproducible rolling-news discovery.
    - RSSHub route channel: expands RSS/list coverage for sources without stable public feeds, especially business media, finance data, healthcare industry media, AI company/research updates, consulting/thinking pieces, and public-account-adjacent sources.
+   - RSSHub routes are grouped into tiers: `core_daily`, `sector_expansion`, `topic_backfill`, `wechat_related`, and `global_reference`. Use all routes only when recall matters more than speed/noise.
    - AI-directed channel: targeted search for reports, rankings, topic pages, official deep releases, think tanks, universities, international institutions, brokerage views, and named/institutional viewpoints.
    - WeChat/public-account lead channel: use `references/wechat_public_accounts.json` as a non-official lead pool for timely articles, industry cases, and viewpoints. These are leads, not final authorities by default.
    - If the project has an `ai_target_sources.json`, use it to guide targeted searches. Replace `{date_terms}` with the active date window.
