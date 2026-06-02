@@ -1,0 +1,21 @@
+{
+  "brief_date": "YYYY-MM-DD",
+  "title": "新闻项目简报",
+  "subtitle": "YYYY年M月D日｜科技创新、医疗卫生与经济民生重点动态",
+  "date_window": ["YYYY-MM-DD"],
+  "sections": ["科技创新", "医疗卫生", "数字经济", "服务业/消费", "就业", "货币金融/投资", "外资外贸"],
+  "items": [
+    {
+      "title": "一句话标题",
+      "field": "科技创新",
+      "section": "科技创新",
+      "source": "来源机构，YYYY-MM-DD，《报道或文件名称》",
+      "source_date": "YYYY-MM-DD",
+      "url": "https://example.com/source",
+      "viewpoint_person": "某人姓名，可为空",
+      "viewpoint_org": "某机构，可为空",
+      "viewpoint": "某人/机构对某事的评价或判断，可为空但不推荐",
+      "body": "【某机构/某人认为或显示】事实、问题、原因或对策精华。每条约300字，突出新信息和判断。"
+    }
+  ]
+}

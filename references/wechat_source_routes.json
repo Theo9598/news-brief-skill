@@ -1,0 +1,42 @@
+{
+  "notes": "Resolution routes for WeChat/public-account leads. Prefer canonical web domains first, then mp.weixin.qq.com, Sogou Weixin, reposted pages, and original-source tracing.",
+  "default_resolution_order": [
+    "canonical_site",
+    "mp_weixin",
+    "sogou_weixin",
+    "repost_pages",
+    "original_source_trace"
+  ],
+  "accounts": {
+    "机器之心": {"canonical_domains": ["jiqizhixin.com", "syncedreview.com"]},
+    "量子位": {"canonical_domains": ["qbitai.com"]},
+    "晚点 LatePost": {"canonical_domains": ["latepost.com"]},
+    "财新": {"canonical_domains": ["caixin.com"]},
+    "第一财经": {"canonical_domains": ["yicai.com"]},
+    "21世纪经济报道": {"canonical_domains": ["21jingji.com"]},
+    "健康界": {"canonical_domains": ["cn-healthcare.com"]},
+    "动脉网": {"canonical_domains": ["vbdata.cn"]},
+    "医药魔方": {"canonical_domains": ["pharmcube.com"]},
+    "财联社": {"canonical_domains": ["cls.cn"]},
+    "新智元": {"canonical_domains": ["aitntnews.com"]},
+    "甲子光年": {"canonical_domains": ["jazzyear.com"]},
+    "36氪": {"canonical_domains": ["36kr.com"]},
+    "钛媒体": {"canonical_domains": ["tmtpost.com"]},
+    "雷峰网": {"canonical_domains": ["leiphone.com"]},
+    "InfoQ": {"canonical_domains": ["infoq.cn"]},
+    "医学界": {"canonical_domains": ["yxj.org.cn"]},
+    "健识局": {"canonical_domains": []},
+    "E药经理人": {"canonical_domains": []},
+    "赛柏蓝": {"canonical_domains": []},
+    "经济观察报": {"canonical_domains": ["eeo.com.cn"]},
+    "证券时报": {"canonical_domains": ["stcn.com"]},
+    "极客公园": {"canonical_domains": ["geekpark.net"]},
+    "爱范儿": {"canonical_domains": ["ifanr.com"]},
+    "硅星人Pro": {"canonical_domains": []},
+    "村夫日记": {"canonical_domains": []},
+    "观潮新消费": {"canonical_domains": []},
+    "窄门餐眼": {"canonical_domains": []},
+    "财经十一人": {"canonical_domains": ["caijing.com.cn"]},
+    "每日经济新闻": {"canonical_domains": ["nbd.com.cn"]}
+  }
+}

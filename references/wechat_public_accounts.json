@@ -1,0 +1,34 @@
+{
+  "notes": "Non-official WeChat/public-account lead pool for 国研室《每日动态》. These accounts are discovery leads, not final authorities by themselves. Trace to original sources where possible.",
+  "use_rules": {
+    "technology_ai": ["机器之心", "量子位", "新智元", "甲子光年", "晚点 LatePost", "36氪", "钛媒体", "雷峰网", "InfoQ", "极客公园", "爱范儿", "硅星人Pro"],
+    "healthcare": ["健康界", "医学界", "动脉网", "健识局", "医药魔方", "E药经理人", "赛柏蓝", "村夫日记"],
+    "macro_finance_trade": ["财新", "第一财经", "经济观察报", "21世纪经济报道", "财联社", "证券时报", "每日经济新闻", "财经十一人"],
+    "consumption_services": ["观潮新消费", "窄门餐眼", "36氪", "晚点 LatePost", "第一财经"]
+  },
+  "classification_fields": {
+    "source_level": ["原创", "采访", "转载", "观点", "广告"],
+    "use_method": ["事实线索", "观点来源", "案例来源", "不用"],
+    "trace_status": ["已追到原始来源", "只找到一层转述", "无法追源"],
+    "risk": ["软文", "样本口径不清", "观点偏置", "时效过旧"]
+  },
+  "final_use_rule": "Do not include a WeChat-origin item in the final brief if it cannot provide at least one of: new data, new policy signal, a representative case, a clear problem, or a credible expert/institutional viewpoint.",
+  "levels": {
+    "A": {
+      "check_frequency": "daily",
+      "accounts": ["机器之心", "量子位", "晚点 LatePost", "财新", "第一财经", "21世纪经济报道", "健康界", "动脉网", "医药魔方", "财联社"]
+    },
+    "B": {
+      "check_frequency": "every_1_2_days_or_by_keyword",
+      "accounts": ["新智元", "甲子光年", "36氪", "钛媒体", "雷峰网", "InfoQ", "医学界", "健识局", "E药经理人", "赛柏蓝", "经济观察报", "证券时报"]
+    },
+    "C": {
+      "check_frequency": "cases_trends_micro_signals",
+      "accounts": ["极客公园", "爱范儿", "硅星人Pro", "村夫日记", "观潮新消费", "窄门餐眼", "财经十一人", "每日经济新闻"]
+    },
+    "optional_expansion": {
+      "check_frequency": "expand_if_40_50_account_pool_requested",
+      "accounts": ["商业观察家", "联商网", "明亮公司", "中国企业家杂志", "投中网", "霞光社", "刺猬公社", "远川研究所", "中金点睛", "华创宏观"]
+    }
+  }
+}

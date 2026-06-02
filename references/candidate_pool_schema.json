@@ -1,0 +1,36 @@
+{
+  "brief_date": "YYYY-MM-DD",
+  "date_window": ["YYYY-MM-DD"],
+  "collection_methods": [
+    {
+      "type": "search_interface | rss | official_api | crawler",
+      "name": "source or tool name",
+      "query_or_endpoint": "query, RSS URL, API endpoint, or crawl target",
+      "safety_note": "network/code safety note"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "c001",
+      "status": "selected | rejected",
+      "discovery_method": "rss | ai_search | official_page | manual_verified | wechat_lead",
+      "section": "科技创新",
+      "field": "科技创新",
+      "title": "一句话标题",
+      "source": "来源机构，YYYY-MM-DD，《报道或文件名称》",
+      "source_date": "YYYY-MM-DD",
+      "url": "https://example.com/source",
+      "viewpoint_person": "某人姓名，可为空",
+      "viewpoint_org": "某机构，可为空",
+      "viewpoint": "某人/机构对某事的评价或判断，可为空但不推荐",
+      "wechat_account": "若来自公众号线索，填公众号名称；否则可为空",
+      "source_level": "原创 | 采访 | 转载 | 观点 | 广告 | 空",
+      "use_method": "事实线索 | 观点来源 | 案例来源 | 不用 | 空",
+      "trace_status": "已追到原始来源 | 只找到一层转述 | 无法追源 | 空",
+      "trace_route": "canonical_site | mp_weixin | sogou_weixin | repost_pages | original_source_trace | none | 空",
+      "risk": "软文 | 样本口径不清 | 观点偏置 | 时效过旧 | 空",
+      "body": "仅 selected 需要完整正文；rejected 可留空。",
+      "screening_reason": "入选理由或淘汰原因"
+    }
+  ]
+}
