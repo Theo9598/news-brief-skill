@@ -1,0 +1,86 @@
+{
+  "notes": "Expanded AI-directed discovery pool. Use when RSS/RSSHub candidates are thin, source diversity is weak, or the brief needs named/institutional viewpoints. These are search targets, not automatic final authorities.",
+  "targets": [
+    {
+      "name": "国内财经证券媒体扩展",
+      "domains": ["yicai.com", "21jingji.com", "stcn.com", "cs.com.cn", "cnstock.com", "nbd.com.cn", "eeo.com.cn", "caixin.com", "jiemian.com", "cls.cn"],
+      "use_for": ["首席观点", "市场研判", "科技产业", "医疗医药", "消费服务", "就业", "货币金融", "外资外贸"],
+      "query_templates": [
+        "site:{domain} {date_terms} 首席 认为 科技 医疗 消费 就业 外贸",
+        "site:{domain} {date_terms} 观点 研判 人工智能 机器人 创新药",
+        "site:{domain} {date_terms} 央行 汇率 资金面 外资 外贸 投资",
+        "site:{domain} {date_terms} 平台经济 服务消费 618 就业 新职业"
+      ]
+    },
+    {
+      "name": "医疗卫生产业媒体扩展",
+      "domains": ["cn-healthcare.com", "vbdata.cn", "pharmcube.com", "yxj.org.cn", "saibailan.com", "med.sina.com"],
+      "use_for": ["医疗卫生", "创新药", "医保", "医院管理", "医药产业", "观点来源"],
+      "query_templates": [
+        "site:{domain} {date_terms} 医保 创新药 目录 观点",
+        "site:{domain} {date_terms} 医疗 健康 产业 专家 表示",
+        "site:{domain} {date_terms} 药企 医院 支付 临床 数据"
+      ]
+    },
+    {
+      "name": "科技与AI产业媒体扩展",
+      "domains": ["jiqizhixin.com", "qbitai.com", "leiphone.com", "infoq.cn", "geekpark.net", "ifanr.com", "tmtpost.com", "36kr.com", "latepost.com"],
+      "use_for": ["科技创新", "AI", "机器人", "大模型", "算力", "企业案例", "产业观点"],
+      "query_templates": [
+        "site:{domain} {date_terms} AI 大模型 机器人 观点",
+        "site:{domain} {date_terms} 算力 半导体 具身智能 投资",
+        "site:{domain} {date_terms} 创业 公司 融资 商业化 问题"
+      ]
+    },
+    {
+      "name": "消费服务与平台经济扩展",
+      "domains": ["linkshop.com", "ebrun.com", "narrowdoor.cn", "geekpark.net", "ifanr.com", "36kr.com", "yicai.com", "eeo.com.cn"],
+      "use_for": ["服务业", "消费", "餐饮", "零售", "平台经济", "文旅", "案例"],
+      "query_templates": [
+        "site:{domain} {date_terms} 消费 服务业 餐饮 零售 观点",
+        "site:{domain} {date_terms} 平台经济 即时零售 本地生活 问题",
+        "site:{domain} {date_terms} 文旅 端午 618 商家 利润"
+      ]
+    },
+    {
+      "name": "就业与劳动力扩展",
+      "domains": ["mohrss.gov.cn", "stats.gov.cn", "zhaopin.com", "liepin.com", "cbre.com.cn", "mckinsey.com.cn", "weforum.org", "ilo.org"],
+      "use_for": ["就业", "人才", "AI影响", "新职业", "工资", "劳动力市场"],
+      "query_templates": [
+        "site:{domain} {date_terms} 就业 新职业 AI 人才 报告",
+        "site:{domain} {date_terms} 劳动力 工资 招聘 技能 观点",
+        "site:{domain} {date_terms} 高校毕业生 中小企业 就业 压力"
+      ]
+    },
+    {
+      "name": "高端智库与国际机构扩展",
+      "domains": ["rand.org", "piie.com", "brookings.edu", "csis.org", "cset.georgetown.edu", "nber.org", "imf.org", "worldbank.org", "oecd.org", "wto.org", "who.int"],
+      "use_for": ["国际参照", "政策建议", "高端智库", "外资外贸", "科技竞争", "医疗卫生"],
+      "query_templates": [
+        "site:{domain} {date_terms} China AI technology policy report",
+        "site:{domain} {date_terms} China healthcare economy trade investment",
+        "site:{domain} {date_terms} China employment consumption financial markets"
+      ]
+    },
+    {
+      "name": "外媒与国际商业媒体扩展",
+      "domains": ["reuters.com", "apnews.com", "ft.com", "wsj.com", "bloomberg.com", "fortune.com", "cnbc.com", "scmp.com", "straitstimes.com", "investing.com", "marketscreener.com"],
+      "use_for": ["外部视角", "跨国公司", "全球市场", "外资外贸", "科技竞争", "金融"],
+      "query_templates": [
+        "site:{domain} {date_terms} China AI technology companies",
+        "site:{domain} {date_terms} China healthcare consumption jobs",
+        "site:{domain} {date_terms} China trade investment currency policy"
+      ]
+    },
+    {
+      "name": "协会与交易所扩展",
+      "domains": ["caam.org.cn", "cansi.org.cn", "chinaisa.org.cn", "cflp.org.cn", "sse.com.cn", "szse.cn", "ccpit.org", "safe.gov.cn", "pbc.gov.cn"],
+      "use_for": ["一手数据", "行业协会", "上市审核", "物流", "外贸", "货币金融"],
+      "query_templates": [
+        "site:{domain} {date_terms} 数据 指数 景气 报告",
+        "site:{domain} {date_terms} 科创 机器人 半导体 创新药",
+        "site:{domain} {date_terms} 外贸 外资 汇率 投资 观点"
+      ]
+    }
+  ]
+}

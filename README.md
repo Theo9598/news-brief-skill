@@ -18,4 +18,6 @@ Common RSSHub generation examples:
 python scripts/generate_rsshub_feeds.py references/rsshub_routes.json --tier core_daily --out rsshub_core_feeds.json
 python scripts/generate_rsshub_feeds.py references/rsshub_routes.json --tier sector_expansion --field 医疗卫生 --out rsshub_health_feeds.json
 python scripts/generate_rsshub_feeds.py references/rsshub_routes.json --tier topic_backfill --field technology_ai --out rsshub_ai_backfill_feeds.json
+python scripts/check_rsshub_routes.py references/rsshub_routes.json --tier core_daily --out rsshub_health.json
+python scripts/generate_live_rsshub_feeds.py rsshub_health.json --out rsshub_live_feeds.json
 ```

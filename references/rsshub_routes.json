@@ -2,7 +2,11 @@
   "notes": "RSSHub routes used only for broad candidate discovery. Prefer original article/report URLs in the final brief. RSSHub public instances can be unstable; treat failures as non-blocking.",
   "default_instance": "https://rsshub.app",
   "fallback_instances": [
-    "https://rsshub.chn.moe"
+    "https://rsshub.liumingye.cn",
+    "https://rsshub.chn.moe",
+    "https://rsshub.rssforever.com",
+    "https://hub.slarker.me",
+    "https://rsshub.rss.tips"
   ],
   "routes": [
     {

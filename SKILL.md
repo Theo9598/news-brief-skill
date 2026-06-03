@@ -23,6 +23,7 @@ Use this skill when the user asks to create, update, or systematize a Chinese ne
    - To expand RSS coverage with RSSHub, generate feed JSON first:
      `scripts/generate_rsshub_feeds.py references/rsshub_routes.json --out RSSHUB_FEEDS.json`.
      For the normal daily run, prefer `--tier core_daily`; for thin sections, add `--tier sector_expansion --field 医疗卫生` or another relevant field; for narrow backfills, use `--tier topic_backfill --field technology_ai`.
+     If public RSSHub instances are unstable, first run `scripts/check_rsshub_routes.py references/rsshub_routes.json --tier core_daily --out RSSHUB_HEALTH.json`, then convert only live routes with `scripts/generate_live_rsshub_feeds.py RSSHUB_HEALTH.json --out RSSHUB_LIVE_FEEDS.json`.
      RSSHub routes are discovery aids only; final briefs should cite original article/report URLs where possible.
    - If project-local `.python-packages` contains `feedparser`, the script uses it for RSS/Atom parsing; otherwise it falls back to Python stdlib XML parsing.
    - Add `--extract-text --max-extract N` to fetch candidate pages and extract article text with `trafilatura` when installed.
@@ -35,12 +36,13 @@ Use this skill when the user asks to create, update, or systematize a Chinese ne
    - RSSHub routes are grouped into tiers: `core_daily`, `sector_expansion`, `topic_backfill`, `wechat_related`, and `global_reference`. Use all routes only when recall matters more than speed/noise.
    - AI-directed channel: targeted search for reports, rankings, topic pages, official deep releases, think tanks, universities, international institutions, brokerage views, and named/institutional viewpoints.
    - WeChat/public-account lead channel: use `references/wechat_public_accounts.json` as a non-official lead pool for timely articles, industry cases, and viewpoints. These are leads, not final authorities by default.
-   - If the project has an `ai_target_sources.json`, use it to guide targeted searches. Replace `{date_terms}` with the active date window.
+   - If the project has an `ai_target_sources.json`, use it to guide targeted searches. The skill also ships `references/ai_target_sources_expanded.json` for broader source discovery. Replace `{date_terms}` with the active date window.
    - For WeChat/public-account leads, generate routed search tasks with `scripts/generate_wechat_search_tasks.py references/wechat_public_accounts.json --routes-json references/wechat_source_routes.json --date-terms "..." --levels A,B --out WECHAT_TASKS.json`.
    - If a complete public `mp.weixin.qq.com` URL is available, fetch and extract it with `scripts/fetch_wechat_article.py URL --out ARTICLE.json`.
    - WeChat original-resolution order: canonical account/site domain first, then `mp.weixin.qq.com`, then Sogou Weixin, then stable repost pages, then trace any named data/report/policy back to the original source.
    - Aggregators such as NewsNow may be used only as discovery aids. Do not cite the aggregator as the final source when the original outlet or a stable republished page is available.
    - RSSHub instances can fail, rate-limit, or lag. Treat failed RSSHub routes as non-blocking and rerun AI-directed search for important missing sections.
+   - Public RSSHub instances should be treated as opportunistic. Health-check route availability before relying on them for a daily run; keep successful routes in the candidate pool and record failed routes as non-blocking telemetry.
    - When RSS output is dominated by a small number of rolling feeds, keep RSS items as clues and rerun AI-directed searches against finance/securities media, industry media, foreign media, think tanks, universities, associations, and international institutions.
 
 4. **Source and selection standards**
