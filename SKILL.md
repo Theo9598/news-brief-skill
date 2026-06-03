@@ -59,6 +59,8 @@ Use this skill when the user asks to create, update, or systematize a Chinese ne
    - Treat Xinhua, People's Daily, CCTV, and similar official/authority outlets as verification and key-fact sources, not the main discovery pool.
    - Prefer supplementing final selections with securities media, industry associations, industry media, think tanks, universities, international institutions, foreign media, and brokerage/research views.
    - Good China-market source mix includes, when available: 第一财经、21世纪经济报道、证券时报、中国证券报、上海证券报、财新、界面、经济观察报、每日经济新闻、财联社、行业媒体/协会、Reuters/AP/FT/Bloomberg/WSJ, and international institutions. Avoid letting 中新网, 36氪 rolling feeds, 新华社, 人民日报, or CCTV become the main body.
+   - Titles must carry policy insight, not just describe the event. Use the accepted patterns in `references/insight_title_patterns.json`. A good title combines a fact/event/phenomenon with a judgment, risk, mechanism, constraint, transformation, bottleneck, governance issue, or next-step recommendation.
+   - Avoid event-only titles such as “某政策发布”, “某会议召开”, “某项目落地”, “某数据增长”. Rewrite them into judgment titles such as “某政策落地后关键在...”, “某数据回升仍需警惕...”, “某现象折射...”, “某行业扩张面临...瓶颈”.
    - WeChat/public-account lead pool:
      - A-level daily scan: 机器之心、量子位、晚点 LatePost、财新、第一财经、21世纪经济报道、健康界、动脉网、医药魔方、财联社.
      - B/C-level scan by keyword or every 1-2 days, especially for industry cases, service consumption, platform economy, healthcare, and AI.
@@ -84,6 +86,9 @@ Use this skill when the user asks to create, update, or systematize a Chinese ne
    - Confirm candidate pool QA, final item QA, date window, required fields, section coverage, duplicate URLs, and minimum item counts.
    - Run source diversity QA:
      `scripts/validate_source_diversity.py ITEMS.json --strict --max-source-share 0.15`
+   - Run title insight QA as a soft check:
+     `scripts/validate_insight_titles.py ITEMS.json`
+     If it reports warnings, rewrite weak titles before generating the final DOCX unless speed is more important than title quality.
    - Viewpoint coverage is a quality signal, not a hard gate: missing viewpoints should trigger targeted follow-up search, not deletion of otherwise important facts.
    - Word delivery uses structural checks only: generated file exists, expected item count is present, source links are embedded, no separate source list exists unless requested, and document colors follow the project style.
 

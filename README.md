@@ -9,6 +9,7 @@ The workflow combines:
 - AI-directed search for high-value reports, viewpoints, and original sources.
 - WeChat/public-account leads with trace-back rules.
 - Hard validation for date windows, required fields, source diversity, and final DOCX structure.
+- Insight-style title checks based on accepted policy-brief title patterns.
 
 See `SKILL.md` for the full operating instructions.
 
@@ -20,4 +21,5 @@ python scripts/generate_rsshub_feeds.py references/rsshub_routes.json --tier sec
 python scripts/generate_rsshub_feeds.py references/rsshub_routes.json --tier topic_backfill --field technology_ai --out rsshub_ai_backfill_feeds.json
 python scripts/check_rsshub_routes.py references/rsshub_routes.json --tier core_daily --out rsshub_health.json
 python scripts/generate_live_rsshub_feeds.py rsshub_health.json --out rsshub_live_feeds.json
+python scripts/validate_insight_titles.py brief_items.json
 ```
